@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const allStar = document.querySelectorAll('.rating .star');
     const ratingValue = document.querySelector('.rating input');
-    const opinion = document.getElementById('opinion');
+    const opinion = document.querySelector('[name="opinion"]'); // Update this line
 
     allStar.forEach((item, idx) => {
         item.addEventListener('click', function() {
@@ -27,16 +27,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const submitButton = document.querySelector('.btn.submit');
 
     submitButton.addEventListener('click', function() {
-        const feedback = opinion.value;
+        const feedback = opinion.value; // Change this line
         const rating = ratingValue.value;
 
-        // Send data to the server
-        fetch('/send-feedback', {
+        // Send data to Netlify Forms
+        fetch('/', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
+                'Content-Type': 'application/x-www-form-urlencoded',
             },
-            body: JSON.stringify({ feedback, rating }),
+            body: `rating=${rating}&opinion=${feedback}`,
         }).then(response => {
             if (response.ok) {
                 // Inform the user the feedback was sent
