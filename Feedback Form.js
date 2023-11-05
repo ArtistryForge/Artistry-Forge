@@ -23,3 +23,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    
+    const submitButton = document.querySelector('.btn.submit');
+
+    submitButton.addEventListener('click', function() {
+        const feedback = opinion.value; // Change this line
+        const rating = ratingValue.value;
