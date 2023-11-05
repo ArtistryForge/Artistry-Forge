@@ -29,3 +29,26 @@ document.addEventListener('DOMContentLoaded', function() {
     submitButton.addEventListener('click', function() {
         const feedback = opinion.value; // Change this line
         const rating = ratingValue.value;
+
+           const submitButton = document.querySelector('.btn.submit');
+
+    submitButton.addEventListener('click', function() {
+        const feedback = opinion.value; // Change this line
+        const rating = ratingValue.value;
+
+        // Send data to Netlify Forms
+        fetch('/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: `rating=${rating}&opinion=${feedback}`,
+        }).then(response => {
+            if (response.ok) {
+                // Inform the user the feedback was sent
+                alert('Feedback submitted successfully!');
+            }
+        });
+    });
+});
+
