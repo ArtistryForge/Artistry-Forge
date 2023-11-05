@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const allStar = document.querySelectorAll('.rating .star');
     const ratingValue = document.querySelector('.rating input');
-    const opinion = document.querySelector('[name="opinion"]'); // Update this line
+    const opinion = document.getElementById('opinion');
 
     allStar.forEach((item, idx) => {
         item.addEventListener('click', function() {
@@ -23,32 +23,28 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
+
     const submitButton = document.querySelector('.btn.submit');
 
     submitButton.addEventListener('click', function() {
-        const feedback = opinion.value; // Change this line
+        const feedback = opinion.value;
         const rating = ratingValue.value;
 
-           const submitButton = document.querySelector('.btn.submit');
-
-    submitButton.addEventListener('click', function() {
-        const feedback = opinion.value; // Change this line
-        const rating = ratingValue.value;
-
-        // Send data to Netlify Forms
-        fetch('/', {
+        // Send data to the server
+        fetch('/send-feedback', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
+                'Content-Type': 'application/json',
             },
-            body: `rating=${rating}&opinion=${feedback}`,
+            body: JSON.stringify({ feedback, rating }),
         }).then(response => {
             if (response.ok) {
                 // Inform the user the feedback was sent
                 alert('Feedback submitted successfully!');
+            } else {
+                // Handle errors
+                alert('Failed to submit feedback. Please try again later.');
             }
         });
     });
 });
-
