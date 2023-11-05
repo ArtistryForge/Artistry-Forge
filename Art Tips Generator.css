@@ -1,0 +1,76 @@
+@import url('https://fonts.cdnfonts.com/css/fira-sans-book');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+body {
+    text-align: center; /* Center align the text inside the body */
+    margin-top: 280px;
+    background: url('Art Tips.jpg') no-repeat;
+    min-height: 80vh;
+    background-size: cover;
+    background-position: center;
+    text-align: center; /* Center align the text inside the header */
+    font-size: 20px;
+    color: #fff;
+}
+
+header {
+    text-align: center; /* Center align the text inside the header */
+    font-size: 25px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.idea-container {
+    text-align: center; /* Center align the text inside the .idea-container */
+    margin-top: 30px; /* Add some top margin for spacing */
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: 20px;
+    color: #fff;
+}
+
+#generate-button {
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+#generate-button:hover {
+    background-color: #fff;
+    color: #08012c;
+    transition: .3s ease-in;
+}
+
+#return-button {
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#return-button:hover {
+    background-color: #fff;
+    color: #08012c;
+    transition: .3s ease-in;
+}

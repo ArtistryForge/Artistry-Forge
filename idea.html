@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" contents="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Idea</title>
+    <link rel="stylesheet" href="Idea style.css">
+</head>
+<body>
+    <header>
+        <h1>Here's your idea!</h1>
+    </header>
+
+    <div class="idea-container">
+        <p id="art-idea">Random Art Idea Goes Here</p>
+        <button id="generate-idea-button">Generate Another Idea</button>
+        <button id="return-button">Return Home</button>
+    </div>
+
+    <script>
+        // Define your array of art ideas
+        const artIdeas = [
+            "Vibrant Color Explosions - Create a large-scale abstract canvas filled with vivid, explosive colors and dynamic shapes.",
+            "Masterful Portrait Pencil Sketches - Dedicate your talents to crafting hyper-detailed pencil portraits of real or imagined subjects.",
+            "Majestic Wilderness Landscapes - Paint serene landscapes featuring towering mountains, lush forests, and tranquil lakes.",
+            "Cityscape Collages - Craft mixed-media artwork capturing the vibrant diversity and energy of urban life.",
+            "Multi-Texture Mixed Media - Produce mixed-media art that combines various textures, from gritty to glossy.",
+            "Whimsical Surreal Dreams - Illustrate surreal dreamscapes filled with unexpected and fantastical elements.",
+            "Digital Cyberpunk Realms - Create futuristic digital art influenced by the cyberpunk aesthetic.",
+            "Fashion Design Sketchbooks - Design detailed fashion sketches showcasing creative clothing and accessories.",
+            "Narrative Graphic Novels - Develop graphic novels or comics with captivating stories and striking visual narratives.",
+            "Impressionist Park Scenes - Paint lively park scenes using impressionist techniques, capturing light and movement.",
+            "Abstract Cubist Portraits - Produce abstract portraits that merge elements of cubism (depicting three-dimensional reality through geometrical shapes on a two-dimensional canvas) with personal expression.",
+            "Iconic Celebrity & Character Portraits - Focus on capturing the essence of famous figures or your favorite characters through striking portrait art.",
+            "Minimalist Architectural Wonders - Create minimalist artwork that emphasizes architectural marvels and their elegance.", 
+            "Sci-Fi Spacescapes - Venture into science fiction, painting imaginative scenes from futuristic space adventures.", 
+            "Renaissance-Style Still Lifes - Emulate the classical style of the Renaissance with beautifully detailed still-life compositions.",
+            "Abstract Oceans of Emotion - Express powerful emotions through abstract art, reminiscent of the ebb and flow of tides.", 
+            "Environmental Activist Murals - Use large-scale murals to advocate for environmental and social causes.", 
+            "Historical Time-Travel Narratives - Take viewers on a journey through history, visually recounting intriguing stories with iconic historical characters or completely made up characters.", 
+            "Fantasy Realms & Mythical Creatures - Immerse yourself in the realm of fantasy art, featuring mythical creatures and dreamlike landscapes.",
+            "Contemporary Abstract Expressionism - Explore the world of abstract expressionism through the use of a multitude of art mediums with dynamic compositions and modern aesthetics.",
+            // Add more ideas here...
+        ];
+
+        // Function to display a random art idea
+        function displayRandomIdea() {
+            const randomIndex = Math.floor(Math.random() * artIdeas.length);
+            const randomIdea = artIdeas[randomIndex];
+            document.getElementById('art-idea').textContent = randomIdea;
+        }
+
+        // Add an event listener to generate a new idea when the button is clicked
+        const generateIdeaButton = document.getElementById('generate-idea-button');
+        generateIdeaButton.addEventListener('click', displayRandomIdea);
+
+        // Display a random art idea when the page loads
+        displayRandomIdea();
+
+        const returnButton = document.getElementById("return-button");
+
+        returnButton.addEventListener("click", function() {
+            window.location.href = "Artistry Forge.html";
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+

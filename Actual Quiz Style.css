@@ -1,0 +1,106 @@
+
+@import url('https://fonts.cdnfonts.com/css/fira-sans-book');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+
+body {
+    color: #fff;
+    background: url('Background.jpg') no-repeat;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    pointer-events: auto;
+    transition: .3s ease-in;
+    backdrop-filter: blur(3px)
+    
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    margin-top: px;
+    font-size: 50px;
+
+}
+
+p {
+    text-align: center;
+    margin-bottom: 5px;
+    padding: 30px 50px;
+    border-bottom: 1px solid;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+
+.container {
+    background: url('Background.jpg') no-repeat;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form p {
+    font-size: 18px;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+    padding: 10px 0;
+}
+
+.label-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    margin-top: 16px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+button {
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #08012c;
+    transition: .3s ease-in;
+}
+
+#results {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#art-idea {
+    font-size: 18px;
+    font-weight: bold;
+}

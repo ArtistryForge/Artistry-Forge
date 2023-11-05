@@ -1,0 +1,151 @@
+@import url('https://fonts.cdnfonts.com/css/fira-sans-book');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Fira Sans', sans-serif;
+}
+
+:root {
+	--yellow: #FFBD13;
+	--blue: #4383FF;
+	--blue-d-1: #3278FF;
+	--light: #F5F5F5;
+	--grey: #4f0404;
+	--white: #FFF;
+	--shadow: 8px 8px 30px rgba(0,0,0,.05);
+}
+
+body {
+	background: url("Feedback Form Background.jpg");
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    pointer-events: auto;
+    backdrop-filter: blur(2px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	padding: 1rem;
+}
+
+
+
+
+
+
+.wrapper {
+	background: var(--white);
+	padding: 2rem;
+	max-width: 576px;
+	width: 100%;
+	border-radius: .75rem;
+	box-shadow: var(--shadow);
+}
+.wrapper h3 {
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+}
+
+.wrapper h4 {
+    font-size: 1rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+}
+.rating {
+	display: flex;
+	align-items: center;
+	grid-gap: .5rem;
+	font-size: 2rem;
+	color: var(--yellow);
+	margin-bottom: 1rem;
+}
+.rating .star {
+	cursor: pointer;
+}
+.rating .star.active {
+	opacity: 0;
+	animation: animate .5s calc(var(--i) * .1s) ease-in-out forwards;
+}
+
+@keyframes animate {
+	0% {
+		opacity: 0;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 1;
+		transform: scale(1.2);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+
+.rating .star:hover {
+	transform: scale(1.1);
+}
+textarea {
+	width: 100%;
+	background: var(--light);
+	padding: 1rem;
+	border-radius: .5rem;
+	border: none;
+	outline: none;
+	resize: none;
+	margin-bottom: .5rem;
+}
+.btn-group {
+	display: flex;
+	grid-gap: .5rem;
+	align-items: center;
+}
+.btn-group .btn {
+	padding: .75rem 1rem;
+	border-radius: .5rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: .875rem;
+	font-weight: 500;
+}
+.btn-group .btn.submit {
+	background: transparent;
+    border: 2px solid;
+	color: #07004c;
+}
+.btn-group .btn.submit:hover {
+	background: #07004c;
+    color:#fff;
+    transition: .3s ease-in;
+    
+}
+.btn-group .btn.cancel {
+	background: var(--white);
+	color: #07004c;
+}
+.btn-group .btn.cancel:hover {
+	background: var(--light);
+}
+
+#return-button {
+    background-color: transparent;
+    color: #07004c;
+    padding: .75rem 1rem;
+    border: 2px solid #07004c;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-size: .875rem;
+    margin-left: 220px;
+}
+
+#return-button:hover {
+    background: #07004c;
+    color:#fff;
+    transition: .3s ease-in;
+}
