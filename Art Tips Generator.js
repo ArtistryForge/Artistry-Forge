@@ -81,5 +81,5 @@ generateButton.addEventListener("click", generateArtTip);
 const returnButton = document.getElementById("return-button");
 
         returnButton.addEventListener("click", function() {
-            window.location.href = "Artistry Forge.html";
+            window.location.href = "index.html";
         });
