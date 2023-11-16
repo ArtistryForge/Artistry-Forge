@@ -1,10 +1,10 @@
-@import url('https://fonts.cdnfonts.com/css/gizmo');
+@import url('https://fonts.cdnfonts.com/css/fira-sans-book');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Gizmo', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
 }
 
 body {
